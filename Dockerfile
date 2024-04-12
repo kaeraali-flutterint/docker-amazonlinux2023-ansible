@@ -10,12 +10,11 @@ RUN dnf makecache \
  && dnf -y install \
       sudo \
       which \
-      python-pip \
-      python3 \
-      python3-pip \
+      python3.11 \
+      python3.11-pip \
  && dnf clean all
 
-RUN pip install $pip_packages
+RUN pip3.11 install $pip_packages
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 RUN mkdir -p /etc/ansible
 RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
