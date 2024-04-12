@@ -6,7 +6,8 @@ on:
     branches: ["main"]
   pull_request:
     branches: ["main"]
-
+  schedule:
+    - cron: "10 1 * * 0" # https://crontab.guru/#10_1_*_*_1
 env:
   REGISTRY: ghcr.io
   ORIGINAL_IMAGE_NAME: ${{ github.repository }}

@@ -10,7 +10,7 @@ Amazon Linux 2023 Docker container for Ansible playbook and role testing
 
 ## How to build
 
-This image is only built when PRs are merged. If you need to build the image on your own locally:
+This image is built weekly or when PRs are merged. If you need to build the image on your own locally:
 
 1. `docker build -t docker-amazonlinux2023-ansible .`
 
