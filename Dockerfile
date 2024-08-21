@@ -1,7 +1,7 @@
 FROM amazonlinux:2023
-LABEL maintainer "Alice Kaerast"
-ENV container docker
-ENV pip_packages "ansible"
+LABEL maintainer="Alice Kaerast"
+ENV container=docker
+ENV pip_packages="ansible"
 
 # Enable systemd.
 RUN dnf -y install systemd && dnf clean all && \
