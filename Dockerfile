@@ -21,6 +21,7 @@ RUN dnf makecache \
       which \
       python3.11 \
       python3.11-pip \
+      vim-minimal \
  && dnf clean all
 
 RUN pip3.11 install $pip_packages
